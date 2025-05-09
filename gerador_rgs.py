@@ -39,23 +39,24 @@ def gerar_nomes_com_genero(qtd_nomes):
 #     cpf_usados = []
 
 #     while numero 
-    
 
-numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
+def gerador_cpf():
+    cpf_usado = []
 
-if numero[0] == 0:
     numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
-else:
-    numero = int("".join(map(str, numero)))
-# while numero[0] == 0:
-#     numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
 
-#     print("Zero detectado ")
-#     break
-numero = f"{numero:011d}" 
-cpf = f"{numero[:3]}.{numero[3:6]}.{numero[6:9]}-{numero[9:]}"
-cpf_usado = []
-cpf_usado.append(cpf)
+    if numero[0] == 0:
+        numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
+    else:
+        numero = int("".join(map(str, numero)))
+
+    numero = f"{numero:011d}" 
+    cpf = f"{numero[:3]}.{numero[3:6]}.{numero[6:9]}-{numero[9:]}"
+
+    cpf_usado.append(cpf)
+
+
+
 print(f"CPF: {cpf}")
 print(f"Lista de Usados: {cpf_usado}")
 
