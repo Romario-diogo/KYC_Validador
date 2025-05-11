@@ -39,6 +39,8 @@ def gerador_cpf():
     numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
     if numero[0] == 0:
         numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
+    elif numero not in cpf_usado:
+        cpf_usado.add(numero)
     else:
         numero = int("".join(map(str, numero)))
     numero = f"{numero:011d}" 
