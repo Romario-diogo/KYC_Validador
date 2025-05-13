@@ -31,13 +31,16 @@ def gerar_nomes_com_genero(qtd_nomes):
             if len(nomes_gerados) >= qtd_nomes:
                 break
 
+
     return nomes_gerados
 
 
 def gerador_cpf():
     cpf_usado = []
+
     numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
     if numero[0] == 0:
+        
         numero = random.choices([0,1,2,3,4,5,6,7,8,9], k=11)
     elif numero not in cpf_usado:
         cpf_usado.add(numero)
