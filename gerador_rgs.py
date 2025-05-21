@@ -50,6 +50,7 @@ def gerador_cpf():
     cpf = f"{numero[:3]}.{numero[3:6]}.{numero[6:9]}-{numero[9:]}"
     cpf_usado.append(cpf)
 
+
 print(f"CPF: {cpf}")
 print(f"Lista de Usados: {cpf_usado}")
 
